@@ -1,0 +1,311 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, Times, "Times New Roman";
+  line-height: 1.6;
+  min-height: 100vh;
+  color: #222;
+  background-color: #f7f4ed;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+p {
+  font-size: var(--fs-base);
+}
+
+img,
+svg {
+  width: 100%;
+  display: block;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #242424;
+  z-index: 50;
+  height: 75px;
+  background-color: #f7f4ed;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  flex: 1;
+  max-width: 1192px;
+  margin: 0 64px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+.logo {
+  max-width: 110px;
+}
+
+.logo svg {
+  height: unset;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+ul {
+  list-style: none;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  gap: 2rem;
+}
+
+p,
+ul {
+  font-family: "Helvetica Nue", Helvetica, sans-serif;
+}
+
+p {
+  font-size: var(--fs-md);
+}
+
+ul li {
+  color: #242424;
+  font-size: 12px;
+}
+
+.cta-btn-div {
+  height: auto;
+}
+
+.cta-btn {
+  background-color: #242424;
+  color: #fff;
+  border-radius: 5em;
+}
+
+.cta-btn.one {
+  padding: 0.8em 1.5em;
+}
+
+.cta-btn.two {
+  padding: 0.5em 2em;
+  font-size: 20px;
+}
+
+main {
+  margin-top: 75px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+main .container {
+  margin-top: 75px;
+  margin-bottom: 20px;
+  flex: 1 1 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.title {
+  font-size: 7rem;
+  line-height: 0.9;
+  font-weight: 500;
+  width: 720px;
+  flex: 0 1 0%;
+  letter-spacing: -0.02em;
+}
+
+.img-div {
+  width: 460px;
+  height: auto;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-46%);
+}
+
+.img-div img {
+  height: inherit;
+}
+
+/* footer */
+
+footer {
+  border-top: 1px solid #242424;
+}
+
+footer .container {
+  margin: 0 auto;
+  max-width: 700px;
+  height: auto;
+}
+footer ul {
+  padding: 24px 0;
+  height: inherit;
+}
+
+footer ul li {
+  font-size: 12px;
+  color: #242424ab;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 60;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  display: flex;
+  visibility: visible;
+}
+
+.overlay-inner-div {
+  flex: 1;
+  padding: 0 1.5rem;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #fff;
+  margin: 0 20px;
+  border-radius: 3px;
+  transform: scale(0.5);
+  transition: transform 0.3s cubic-bezier(0.25, 1.25, 0.5, 1), opacity 0.6s ease;
+  transform-origin: center center;
+  opacity: 0;
+}
+
+.overlay.active .overlay-inner-div {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.overlay-inner-div > div {
+  position: relative;
+  padding: 3rem 0;
+  text-align: center;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.overlay-inner-div > div h2 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.social-login-div {
+  padding: 1rem;
+}
+
+.social-login-div button {
+  padding: 0.5rem 5rem 0.5rem 0.5rem;
+  border-radius: 2em;
+  font-size: 1rem;
+  border: 1px solid #242424;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.social-login-div button span {
+  width: 30px;
+  height: 30px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  font-size: 1.5rem;
+  padding: 0.2em 0.4em;
+  display: inline-block;
+  z-index: 70;
+  color: #2424249f;
+}
+
+.social-login-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-login-div .svg-div {
+  width: 20px;
+}
+
+.social-login-div p {
+  font-size: 14px;
+}
+
+.social-login-div p a {
+  text-decoration: underline;
+}
+
+.overlay-inner-div small {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 11px;
+}
+.overlay-inner-div small a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1260px) {
+  body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+  main {
+    width: 1241px;
+  }
+}
