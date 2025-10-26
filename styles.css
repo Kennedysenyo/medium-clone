@@ -307,13 +307,12 @@ footer ul li {
     overflow-y: auto !important;
     overflow-x: hidden !important;
   }
-  /* .title {
-    width: 1000px;
-  } */
+
   .img-div {
     margin-left: calc(-460px - (100vw - 1240px));
   }
 }
+
 @media screen and (max-width: 903px) {
   .title {
     font-size: 6.5rem;
