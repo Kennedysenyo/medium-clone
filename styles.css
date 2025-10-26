@@ -302,6 +302,7 @@ footer ul li {
   text-decoration: underline;
 }
 
+/* MEDIA QUERIES */
 @media screen and (max-width: 1240px) {
   body {
     overflow-y: auto !important;
@@ -340,7 +341,7 @@ footer ul li {
   }
 
   footer .container {
-    margin-left: 4rem;
+    margin: 0 0 0 64px;
   }
 
   footer ul li {
@@ -378,7 +379,8 @@ footer ul li {
     display: none;
   }
 
-  .container {
+  .container,
+  footer .container {
     margin: 0 2rem;
   }
   .title {
