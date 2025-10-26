@@ -158,7 +158,8 @@ main .container {
   height: 600px;
   position: absolute;
   top: 50%;
-  right: 0;
+  left: 100%;
+  margin-left: -460px;
   transform: translateY(-46%);
 }
 
@@ -189,6 +190,7 @@ footer ul li {
 
 /* Overlay */
 .overlay {
+  visibility: hidden;
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.25);
@@ -196,7 +198,6 @@ footer ul li {
   justify-content: center;
   align-items: center;
   display: flex;
-  visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -301,16 +302,27 @@ footer ul li {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1240px) {
   body {
     overflow-y: auto !important;
     overflow-x: hidden !important;
   }
-  main {
-    width: 1241px;
+  /* .title {
+    width: 1000px;
+  } */
+  .img-div {
+    margin-left: calc(-460px - (100vw - 1240px));
   }
 }
 @media screen and (max-width: 903px) {
+  .title {
+    font-size: 6.5rem;
+  }
+
+  .img-div {
+    visibility: hidden;
+  }
+
   .overlay {
     align-items: stretch;
   }
@@ -353,5 +365,22 @@ footer ul li {
 
   footer ul li:not(.about, .help, .terms, .privacy) {
     display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .title {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main .container {
+  }
+  .container {
+    margin: 0 2rem;
+  }
+  .title {
+    font-size: 5rem;
   }
 }
