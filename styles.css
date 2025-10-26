@@ -207,6 +207,17 @@ footer ul li {
   visibility: visible;
 }
 
+.overlay-inner-div > div {
+  position: relative;
+  padding: 3rem 0;
+  text-align: center;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
 .overlay-inner-div {
   flex: 1;
   padding: 0 1.5rem;
@@ -226,17 +237,6 @@ footer ul li {
 .overlay.active .overlay-inner-div {
   transform: scale(1);
   opacity: 1;
-}
-
-.overlay-inner-div > div {
-  position: relative;
-  padding: 3rem 0;
-  text-align: center;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
 }
 
 .overlay-inner-div > div h2 {
@@ -267,7 +267,7 @@ footer ul li {
 .close-button {
   position: absolute;
   top: 10px;
-  right: -15px;
+  right: 10px;
   font-size: 1.5rem;
   padding: 0.2em 0.4em;
   display: inline-block;
@@ -309,9 +309,49 @@ footer ul li {
   main {
     width: 1241px;
   }
+}
+@media screen and (max-width: 903px) {
+  .overlay {
+    align-items: stretch;
+  }
+
+  .overlay-inner-div {
+    max-width: 580px;
+    justify-content: center;
+  }
 
   .cta-btn.two {
     background-color: #1a8917;
+  }
+
+  footer {
+    background-color: #242424;
+  }
+
+  footer .container {
+    margin-left: 4rem;
+  }
+
+  footer ul li {
     color: #fff;
+  }
+
+  footer ul .about {
+    order: 1;
+  }
+
+  footer ul .help {
+    order: 2;
+  }
+
+  footer ul .terms {
+    order: 3;
+  }
+  footer ul .privacy {
+    order: 4;
+  }
+
+  footer ul li:not(.about, .help, .terms, .privacy) {
+    display: none;
   }
 }
