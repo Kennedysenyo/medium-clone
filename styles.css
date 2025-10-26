@@ -121,6 +121,7 @@ ul li {
 .cta-btn.two {
   padding: 0.5em 2em;
   font-size: 20px;
+  transition: background-color 0.3s ease;
 }
 
 main {
@@ -307,5 +308,10 @@ footer ul li {
   }
   main {
     width: 1241px;
+  }
+
+  .cta-btn.two {
+    background-color: #1a8917;
+    color: #fff;
   }
 }
