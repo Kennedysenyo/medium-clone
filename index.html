@@ -102,30 +102,35 @@
           >
         </div>
         <div class="content email-signup">
-          <div>
+          <div class="email-logo">
             <img src="./img/email.png" alt="" />
           </div>
 
           <h2>Sign up with email</h2>
+          <div class="form-div">
+            <form>
+              <label
+                >Your email<br />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  autocomplete="off"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Enter a valid email"
+                />
+              </label>
+              <button type="submit">Create account</button>
+            </form>
 
-          <form>
-            <label>Your email</label>
-            <input
-              type="email"
-              name="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              title="Enter a valid email"
-            />
-            <button type="submit">Create account</button>
-          </form>
-
-          <p>Back to sign up options</p>
-
-          <div>
+            <p>Back to sign up options</p>
+            <p>Already have an account? <a href="#">Sign in</a></p>
+          </div>
+          <div class="small-div">
             <small
-              >By clicking "Sign up", you accept Medium's
+              >By clicking "Create Account", you accept Medium's
               <a href="#">Terms of Service</a> and
-              <a href="#">Privacy Policy</a></small
+              <a href="#">Privacy Policy</a>.</small
             >
             <small
               >This site uses reCaptcha and the Google

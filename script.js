@@ -1,11 +1,13 @@
 const ctaButtonsArray = document.querySelectorAll(".cta-btn");
 const overlay = document.querySelector(".overlay");
+const signupDiv = document.querySelector(".content.signup-options");
 
 const closeBtn = document.querySelector(".close-button");
 
 ctaButtonsArray.forEach((ctaBtn) =>
   ctaBtn.addEventListener("click", () => {
     overlay.classList.add("active");
+    signupDiv.style.display = "none";
     document.body.style.overflow = "hidden";
 
     overlay.addEventListener("click", (e) => {
