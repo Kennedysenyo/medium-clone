@@ -224,7 +224,7 @@ footer ul li {
   opacity: 0;
 }
 
-.overlay-inner-div > div {
+.overlay-inner-div > .content {
   position: relative;
   padding: 3rem 0;
   text-align: center;
@@ -240,7 +240,7 @@ footer ul li {
   opacity: 1;
 }
 
-.overlay-inner-div > div h2 {
+.overlay-inner-div > .content h2 {
   font-size: 1.8rem;
   font-weight: 400;
 }
