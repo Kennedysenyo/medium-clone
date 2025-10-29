@@ -305,8 +305,12 @@ footer ul li {
 }
 
 /* ---Login with email overlay--- */
-.email-signup {
-  gap: 2rem;
+.content.email-signup {
+  display: none;
+}
+
+.content.email-signup.active {
+  display: flex;
 }
 .email-logo {
   width: 48px;
@@ -362,6 +366,7 @@ footer ul li {
 
 .form-div p:first-of-type {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .form-div p:last-child a {
