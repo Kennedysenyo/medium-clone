@@ -1,4 +1,4 @@
-![Home Page](./img/screenshots/homepage.jpgimage.png)
+![Home Page](./img/screenshots/homepage.jpg)
 
 # Medium Page
 
