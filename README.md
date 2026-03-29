@@ -10,4 +10,4 @@ A simple demonstration of HTML, CSS, JavaScript working to together.
 
 ![Modal 1](./img/screenshots/signup%20modal.jpg)
 
-![Modal 2](./img/screenshots/signup%20modal.jpg)
+![Modal 2](./img/screenshots/email-method.jpg)
